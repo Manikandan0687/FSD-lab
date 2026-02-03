@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Manikandan R | Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.min.js"></script>
+
+    <style>
+        .profile-img {
+            width: 200px;
+            border-radius: 50%;
+        }
+        .scroll-box {
+            height: 180px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .carousel-img {
+            height: 500px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 🔹 NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Manikandan R</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#internship">Internship</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 🔹 CAROUSEL -->
+<!-- ================= SLIDER / CAROUSEL ================= -->
+<div id="carouselExampleCaptions" class="carousel slide"
+     data-bs-ride="carousel" data-bs-interval="3000">
+
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="mani1.png" class="carousel-img"  style="width: 1000px; height: auto;" alt="IEEE Paper Presentation">
+        </div>
+
+        <div class="carousel-item">
+            <img src="mani2.png" class="carousel-img"  style="width: 1000px; height: auto;" alt="Winners in Aadhi College">
+        </div>
+
+    <div class="carousel-item">
+            <img src="mani3.png" class="carousel-img " style="width: 1000px; height: auto;" alt="2nd Runner-up in KCET">
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- 🔹 ABOUT -->
+<div class="container mt-4" id="about">
+    <h2 class="text-primary">About Me</h2>
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="maniprofile.png" class="profile-img" alt="Manikandan">
+        </div>
+        <div class="col-md-8">
+            <p>
+                I am a passionate college student with a strong interest in web development. I am currently learning how to design and develop simple, responsive, and user-friendly websites using modern web technologies. I enjoy exploring new tools and frameworks, understanding how websites work, and improving my skills step by step through practice and small projects.
+
+I am a hardworking and self-motivated learner who is always eager to gain new knowledge and adapt to emerging technologies. I believe in continuous learning and hands-on experience to strengthen my technical abilities. My goal is to apply my skills to build meaningful web applications and grow into a skilled and confident web developer.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- 🔹 EDUCATION (TABLE) -->
+<div class="container mt-4" id="education">
+    <h2 class="text-info">Education</h2>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Course</th>
+                <th>Institution</th>
+                <th>Year / Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>B.E – Computer Science and Engineering</td>
+                <td>Kamaraj College of Engineering and Technology, Virudhunagar</td>
+                <td>2023 – Present (CGPA: 7.5)</td>
+            </tr>
+            <tr>
+                <td>Higher Secondary Education</td>
+                <td>St Mary’s Higher Secondary School, Madurai</td>
+                <td>2022 – 2023 (80%)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- 🔹 INTERNSHIP (SCROLL BAR) -->
+<div class="container mt-4" id="internship">
+    <h2 class="text-success">Internship</h2>
+    <div class="scroll-box">
+        <p>
+            Completed Internship Training Programme in <b>Data Science</b> at
+            <b>Global Solution, Madurai – 2025</b>.<br><br>
+            Gained basic understanding of Data Science concepts and interested
+            in applying skills to build a strong career in Data Science.
+            Completed an Internship Training Programme in Data Science at Global Solution, Madurai in 2025. During this internship, I gained a foundational understanding of core Data Science concepts such as data collection, data preprocessing, data analysis, and basic data visualization. I worked with datasets to understand patterns and trends, which helped me improve my analytical and problem-solving skills.
+
+This internship enhanced my interest in the field of Data Science and motivated me to apply my knowledge to real-world problems. I am eager to further develop my skills, work on practical projects, and build a strong and successful career in Data Science.
+        </p>
+    </div>
+</div>
+
+<div class="container mt-4" id="projects">
+    <h2 class="text-warning">Projects</h2>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="text-center"><h5 class="card-title">Online Shopping System</h5></div>
+                    <p class="card-text">
+                        Developed a dynamic Online Shopping System using HTML, CSS, JavaScript, PHP, and MySQL. The system allows users to browse products, view product details, add items to the cart, and place orders through an interactive web interface. Admin functionalities include managing product listings, updating prices, and handling orders.
+This project helped me understand front-end design, back-end logic, database connectivity, and session handling while building a real-time web application.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="text-center"><h5 class="card-title">Online Donating Hub</h5></div>
+                    <p class="card-text">
+                        Developed an Online Donating Hub using HTML, CSS, JavaScript, PHP, and MySQL to facilitate secure online donations. The system enables users to donate online and stores donor and donation details in a database for record management. Admin features include viewing donation history and managing donor information.
+Through this project, I gained experience in form validation, secure data handling, and database operations, improving my understanding of full-stack web development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 🔹 ACHIEVEMENTS -->
+<div class="container mt-4">
+    <h2 class="text-secondary">Achievements</h2>
+    <div class="text-center">
+    <ul>
+        <li>Python in Data Science – Infosys Springboard</li>
+        <li>Technical Quiz Winner – KLN College, Madurai</li>
+        <li>Solved 150+ programs in Skillrack</li>
+    </ul>
+    </div>
+
+</div>
+<!-- 🔹 SKILLS -->
+<div class="container-fluid bg-light mt-4 p-4" id="skills">
+    <h2 class="text-danger text-center">Skills</h2>
+
+    <div class="row mt-3">
+        <!-- Technical Skills -->
+        <div class="col-md-6 text-center">
+            <h4 class="text-primary">Technical Skills</h4>
+            <span class="badge bg-primary p-2 m-1">C</span>
+            <span class="badge bg-primary p-2 m-1">Python</span>
+            <span class="badge bg-primary p-2 m-1">Java</span>
+            <span class="badge bg-success p-2 m-1">HTML</span>
+            <span class="badge bg-success p-2 m-1">CSS</span>
+            <span class="badge bg-success p-2 m-1">JavaScript</span>
+            <span class="badge bg-warning p-2 m-1">MySQL</span>
+            <span class="badge bg-dark p-2 m-1">VS Code</span>
+            <span class="badge bg-info p-2 m-1">Web Development</span>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="col-md-6 text-center">
+            <h4 class="text-success">Soft Skills</h4>
+            <span class="badge bg-secondary p-2 m-1">Team Work</span>
+            <span class="badge bg-secondary p-2 m-1">Time Management</span>
+            <span class="badge bg-secondary p-2 m-1">Creativity</span>
+            <span class="badge bg-secondary p-2 m-1">Adaptability</span>
+            <span class="badge bg-secondary p-2 m-1">Willingness to Learn</span>
+        </div>
+    </div>
+</div>
+
+
+<!-- 🔹 CONTACT -->
+<div class="container mt-4 mb-4 text-center" id="contact">
+    <h2 class="text-dark">Contact</h2>
+    <p>
+        📍 Madurai <br>
+        📧 manivany16@gmail.com <br>
+        📞 8778688198
+    </p>
+    <a href="#" class="btn btn-primary m-1">LinkedIn</a>
+    <a href="#" class="btn btn-dark m-1">GitHub</a>
+</div>
+
+</body>
+</html>
