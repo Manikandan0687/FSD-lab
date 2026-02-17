@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<body style="display: flex; justify-content: center; padding-top: 50px;">
+
+    <div id="main-container" style="border: 2px solid black; padding: 20px; width: 400px; border-radius: 10px;">
+       
+        <center>
+            <h1>Kcet Learning App</h1>
+        </center>
+
+        <hr>
+
+        <div id="quiz-box">
+            <p id="count"></p>
+            <h3 id="question"></h3>
+           
+            <div id="options"></div>
+
+            <br>
+            <div style="display: flex; justify-content: space-between;">
+                <button onclick="change(-1)">Previous</button>
+                <button onclick="change(1)">Next</button>
+            </div>
+        </div>
+
+        <div id="result-box" style="display: none; text-align: center;">
+            <h2>Quiz Completed 🎉</h2>
+            <p id="score"></p>
+            <button onclick="location.reload()">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script>
+        const quizData = [
+            { q: "Which country does Cristiano Ronaldo represent?", o: ["Spain", "Portugal", "Brazil", "France"], a: 1 },
+            { q: "What is Cristiano Ronaldo's jersey number?", o: ["7", "9", "10", "11"], a: 0 },
+            { q: "In which year was Ronaldo born?", o: ["1983", "1985", "1987", "1989"], a: 1 },
+            { q: "Which club made Ronaldo famous in England?", o: ["Chelsea", "Arsenal", "Manchester United", "Liverpool"], a: 2 },
+            { q: "Which Spanish club did Ronaldo play for?", o: ["Barcelona", "Atletico Madrid", "Real Madrid", "Valencia"], a: 2 },
+            { q: "Which Italian club did Ronaldo join in 2018?", o: ["AC Milan", "Inter Milan", "Juventus", "Roma"], a: 2 },
+            { q: "What position does Ronaldo play?", o: ["Goalkeeper", "Defender", "Midfielder", "Forward"], a: 3 },
+            { q: "What is Ronaldo known for his celebration called?", o: ["Boom", "Si", "Goal Dance", "Jump Kick"], a: 1 },
+            { q: "How many Ballon d'Or awards has Ronaldo won (approx)?", o: ["2", "3", "5", "8"], a: 2 },
+            { q: "Which skill is Ronaldo especially famous for?", o: ["Long Throws", "Free Kicks and Heading", "Goalkeeping", "Defending"], a: 1 }
+        ];
+
+        let current = 0, answers = [];
+
+        function load() {
+            const data = quizData[current];
+            document.getElementById('count').innerText = `Question ${current + 1} of ${quizData.length}`;
+            document.getElementById('question').innerText = data.q;
+           
+            document.getElementById('options').innerHTML = data.o.map((opt, i) =>
+                `<div style="margin-bottom: 5px;">
+                    <input type="radio" name="opt" id="o${i}" value="${i}" ${answers[current] == i ? 'checked' : ''}>
+                    <label for="o${i}">${opt}</label>
+                </div>`
+            ).join('');
+        }
+
+        window.change = (dir) => {
+            const selected = document.querySelector('input[name="opt"]:checked');
+            if (dir > 0 && !selected) return alert("Please select an answer");
+            if (selected) answers[current] = parseInt(selected.value);
+           
+            current += dir;
+
+            if (current >= quizData.length) {
+                showResult();
+            } else if (current >= 0) {
+                load();
+            } else {
+                current = 0;
+            }
+        }
+
+        function showResult() {
+            const score = quizData.filter((q, i) => q.a === answers[i]).length;
+            document.getElementById('quiz-box').style.display = 'none';
+            document.getElementById('result-box').style.display = 'block';
+            document.getElementById('score').innerText = `Your Score: ${score} / ${quizData.length}`;
+        }
+
+        load();
+    </script>
+</body>
+</html>
